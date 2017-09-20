@@ -13,7 +13,6 @@ public class Exercicio06 {
 		String palavra = null;
 		Iterator lista = textos.iterator();
 		while (lista.hasNext()){
-			System.out.println(lista.next());
 			palavra = lista.next().toString();
 			novaLista.add(palavra);
 		}
