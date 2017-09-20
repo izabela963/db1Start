@@ -1,21 +1,15 @@
 package br.com.db1.exercicios;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.ArrayList;
+
+import java.util.List;
+
 
 public class Exercicio06 {
 	
 	
-	public Set<String> copiaLista(Set<String> textos){
-		Set<String> novaLista = new HashSet<>();
-
-		String palavra = null;
-		Iterator lista = textos.iterator();
-		while (lista.hasNext()){
-			palavra = lista.next().toString();
-			novaLista.add(palavra);
-		}
+	public List<String> copiaLista(List<String> textos){
+		List<String> novaLista = new ArrayList<>(textos);
 
 		return novaLista;
 	}

@@ -16,7 +16,7 @@ public class Exercicio03Test {
 	Exercicio03 colecao = new Exercicio03();
 		
 	@Test
-	public void excluiPosicao(){
+	public void excluiPosicaoTest(){
 		
 		List<Integer> valores = new ArrayList<>();
 		for (int i = 0; i < 10; i++) {

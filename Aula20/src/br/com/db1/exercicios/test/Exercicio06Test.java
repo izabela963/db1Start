@@ -1,8 +1,7 @@
 package br.com.db1.exercicios.test;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -17,7 +16,7 @@ public class Exercicio06Test {
 			
 			Exercicio06 colecao = new Exercicio06();
 			
-			Set<String> textos = new HashSet<String>();
+			List<String> textos = new ArrayList<>();
 			textos.add("oi");
 			textos.add("sdfs");
 			textos.add("sdse");
@@ -29,12 +28,8 @@ public class Exercicio06Test {
 			textos.add("rfthwr");
 			textos.add("fghrt");
 			
-			Set<String> novaLista = colecao.copiaLista(textos);
-			
-			Iterator lista = textos.iterator();
-			while (lista.hasNext()){
-				Assert.assertTrue(novaLista.contains(lista.next().toString())); 
-			}
+			List<String> novaLista = colecao.copiaLista(textos);
+			Assert.assertEquals(novaLista, textos);
 			
 		}
 }

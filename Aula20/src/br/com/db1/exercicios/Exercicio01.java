@@ -3,7 +3,6 @@ package br.com.db1.exercicios;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.omg.CORBA.portable.ValueOutputStream;
 
 public class Exercicio01 {
 	

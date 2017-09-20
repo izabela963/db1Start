@@ -11,6 +11,7 @@ import br.com.db1.exercicios.Exercicio04;
 
 
 public class Exercicio04Test {
+	
 	Exercicio04 colecao = new Exercicio04();
 	
 	@Test
