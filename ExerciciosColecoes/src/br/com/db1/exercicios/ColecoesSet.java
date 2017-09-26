@@ -1,9 +1,12 @@
 package br.com.db1.exercicios;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class ColecoesSet {
 	
@@ -37,9 +40,21 @@ public class ColecoesSet {
 		return nomesDb1Start;
 	}
 	
+	
+	//método gambiarra
 	public Set<String> getListaOrdenada(){
-		Collections.sort(nomesDb1Start);
-		return nomesDb1Start;
-	}
+		List<String> ordenados = new ArrayList<>();
+		ordenados.addAll(nomesDb1Start);
+		Collections.sort(ordenados);
+		
+		return ordenados;
+	} 
+	
+	//método correto
+	public Set<String> getListaOrdenada2(){
+		Set<String> ordenados = new TreeSet<>();
+		ordenados.addAll(nomesDb1Start);
+		return ordenados;
+	} 
 	
 }

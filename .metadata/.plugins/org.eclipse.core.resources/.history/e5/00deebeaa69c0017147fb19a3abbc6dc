@@ -1,0 +1,36 @@
+package br.com.db1.exercicios.test;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+import br.com.db1.exercicios.Colecoes;
+
+public class ColecoesTest {
+
+	Colecoes colecao = new Colecoes();
+	
+	@Test
+	public void validaQuantidadeTest() {
+		
+		colecao.adicionarNomes("Leonardo");
+		colecao.adicionarNomes("Patrick");
+		colecao.adicionarNomes("Maycon");
+		colecao.adicionarNomes("Camile");
+		colecao.adicionarNomes("Mateus");
+		colecao.adicionarNomes("Matheus");
+		colecao.adicionarNomes("Luiz");
+		colecao.adicionarNomes("Isadora");
+		colecao.adicionarNomes("Brenda");
+		colecao.adicionarNomes("Daniel");
+		colecao.adicionarNomes("André");
+		
+		Assert.assertTrue(11 == colecao.getLista().size());
+		
+		
+	}
+	
+	@Test
+	public void removeItens(){
+		
+	}
+}
