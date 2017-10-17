@@ -1,0 +1,34 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>CadastrarCandidato</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h:outputLabel value="Nome" />
+		<br />
+		<h:inputText id="nomeCandidato" />
+		<br />
+		<h:outputLabel value="E-mail" />
+		<br />
+		<h:inputText id="emailCandidato" />
+
+		<br />
+		<h:outputLabel value="Telefone " />
+		<br />
+		<h:inputText id="telefoneCandidato" />
+
+		<br />
+		<h:outputLabel value="Rede Social" />
+		<br />
+		<h:inputText id="linkCandidato" />
+		<br/>
+		<br/>
+		<h:commandButton value="Cancelar" action="home"/>
+		<h:commandButton value="Cadastrar" action="#{cadastrarCandidato.cadastrar()}"/>
+		<br />
+		<h:outputLabel value="Status: #{cadastrarCandidato.status}" />
+
+	</h:form>
+</h:body>
+</html>

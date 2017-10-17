@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>Cadastrar Usuario</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h:outputLabel value="Nome" />
+		<br />
+		<h:inputText id="nomeUsuario" />
+		<br />
+		<br />
+		<h:outputLabel value="Linguagem" />
+		<h:selectOneMenu id="linguagem" value="#{cadastrarUsuario.linguagem}">
+			<f:selectItems value="#{cadastrarUsuario.listaLinguagem}" />
+		</h:selectOneMenu>
+		<br />
+		<br />
+		<h:outputLabel value="E-mail" />
+		<br />
+		<h:inputText id="emailUsuario" />
+		<br />
+		<br />
+		<h:outputLabel value="Senha" />
+		<br />
+		<h:inputText id="senhaUsuario" />
+		<br />
+		<br />
+		<h:commandButton value="Cancelar" action="home" />
+		<h:commandButton value="Cadastrar" action="#{cadastrarUsuario.cadastrar()}"/>
+		<br />
+		<h:outputLabel value="Status: #{cadastrarUsuario.status}" />
+
+	</h:form>
+</h:body>
+</html>

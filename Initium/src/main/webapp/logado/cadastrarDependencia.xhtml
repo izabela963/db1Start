@@ -1,0 +1,21 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>Cadastrar Dependencia</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h:outputLabel value="Nome" />
+		<br />
+		<h:inputText id="nomeDependencia" />
+		<br />
+		<br />
+		<h:commandButton value="Cancelar" action="home" />
+		<h:commandButton value="Cadastrar" action="#{cadastrarDependencia.cadastrar}" />
+		<br />
+		<h:outputLabel value="Status: #{cadastrarDependencia.status}" />
+
+	</h:form>
+</h:body>
+</html>
