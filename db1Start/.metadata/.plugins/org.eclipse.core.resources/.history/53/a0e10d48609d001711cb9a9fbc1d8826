@@ -1,0 +1,23 @@
+package br.com.db1.exercicios.test;
+
+import java.util.Set;
+
+import org.junit.Test;
+
+import br.com.db1.exercicios.ColecoesSet;
+
+public class Exercicio01Test {
+	
+	Exercicio01 colecao = new Exercicio01();
+	
+	@Test
+	public void getVogaisTest(){
+		Set<String> vogais = colecao.getVogais("Fusca");
+		Assert.assertTrue(vogais.size() == 2);
+		Assert.assertFalse(vogais.contains("F"));
+		Assert.assertTrue(vogais.contains("u"));
+		Assert.assertFalse(vogais.contains("s"));
+		Assert.assertFalse(vogais.contains("c"));
+		Assert.assertTrue(vogais.contains("a"));
+	}
+}

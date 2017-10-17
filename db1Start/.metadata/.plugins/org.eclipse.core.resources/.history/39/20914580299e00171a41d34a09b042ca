@@ -1,0 +1,25 @@
+package br.com.db1.exercicios;
+
+import java.util.Iterator;
+import java.util.List;
+
+public class Exercicio07 {
+	
+	public Boolean compare(List<String> lista1, List<String> lista2){
+		
+		if (lista1.size() == lista2.size()) {
+			
+			for (int i = 0; i < lista1.size(); i++) {
+				Iterator primeiraLista = lista1.iterator();
+				Iterator segundaLista = lista2.iterator();
+				while (primeiraLista.hasNext()){
+					if (!(primeiraLista.next().toString()).equals(segundaLista.next().toString())){
+						return false;
+					}
+				}
+			}
+		}
+
+		return true;
+	}
+}

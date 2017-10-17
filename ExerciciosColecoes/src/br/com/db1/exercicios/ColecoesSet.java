@@ -1,5 +1,6 @@
 package br.com.db1.exercicios;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
@@ -7,6 +8,12 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
+=======
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+>>>>>>> origin/master
 
 public class ColecoesSet {
 	
@@ -40,6 +47,7 @@ public class ColecoesSet {
 		return nomesDb1Start;
 	}
 	
+<<<<<<< HEAD
 	
 	//método gambiarra
 	public Set<String> getListaOrdenada(){
@@ -56,5 +64,11 @@ public class ColecoesSet {
 		ordenados.addAll(nomesDb1Start);
 		return ordenados;
 	} 
+=======
+	public Set<String> getListaOrdenada(){
+		Collections.sort(nomesDb1Start);
+		return nomesDb1Start;
+	}
+>>>>>>> origin/master
 	
 }

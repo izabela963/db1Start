@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 applyBackground=false
 approved.defs.file.last.changed.time=1499285043000
 eclipse.preferences.version=1
@@ -6,3 +7,10 @@ last.download.attempt.time=1505762026608
 lastConfiguration=1.505493583143E12
 newinstall=true
 workbench.theme=Dark Gray
+=======
+approved.defs.file.last.changed.time=1499285043000
+eclipse.preferences.version=1
+last.download.attempt.time=1506212886115
+newinstall=false
+showWelcomeDialog=false
+>>>>>>> origin/master

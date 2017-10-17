@@ -1,2 +1,6 @@
 colorTheme=Darkest Dark
 eclipse.preferences.version=1
+<<<<<<< HEAD
+=======
+forceDefaultBG=false
+>>>>>>> origin/master

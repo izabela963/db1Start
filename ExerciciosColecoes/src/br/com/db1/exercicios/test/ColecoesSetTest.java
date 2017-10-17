@@ -2,9 +2,12 @@ package br.com.db1.exercicios.test;
 
 
 
+<<<<<<< HEAD
 import java.util.Iterator;
 import java.util.List;
 
+=======
+>>>>>>> origin/master
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -59,6 +62,7 @@ public class ColecoesSetTest {
 	
 	@Test
 	public void exercicio6Test(){
+<<<<<<< HEAD
 		List<String> ordenada = (List<String>) colecao.getListaOrdenada();
 		Iterator<String> it = ordenada.iterator();
 		while(it.hasNext()){
@@ -74,4 +78,9 @@ public class ColecoesSetTest {
 			System.out.println(it.next());
 		}
  	} 
+=======
+		colecao.getListaOrdenada();
+		colecao.percorrerList();
+ 	}
+>>>>>>> origin/master
 }

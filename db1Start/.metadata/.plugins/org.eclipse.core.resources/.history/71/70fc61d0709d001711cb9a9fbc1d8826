@@ -1,0 +1,21 @@
+/* 
+package br.com.db1.exercicios;
+
+
+import java.util.Iterator;
+import java.util.List;
+
+public class Exercicio04 {
+	public List<Integer> excluiPosicao(List<Integer> valores) {
+		Iterator lista = valores.iterator();
+		while (lista.hasNext()){
+			
+			if (lista.next() % 3 == 0) {
+				
+			}
+		}
+		
+		return valores;
+	}
+}
+ */

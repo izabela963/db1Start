@@ -1,5 +1,6 @@
 asm_directive=141,203,226
 asm_label=216,216,216
+<<<<<<< HEAD
 buildConsoleBackgroundColor=28,31,34
 buildConsoleErrorStreamColor=218,29,67
 buildConsoleInfoStreamColor=121,171,255
@@ -8,6 +9,16 @@ buildConsoleProblemBackgroundColor=14,16,17
 buildConsoleProblemHighlightedColor=255,127,127
 buildConsoleProblemInfoBackgroundColor=28,31,34
 buildConsoleProblemWarningBackgroundColor=11,13,14
+=======
+buildConsoleBackgroundColor=32,36,37
+buildConsoleErrorStreamColor=225,30,70
+buildConsoleInfoStreamColor=121,171,255
+buildConsoleOutputStreamColor=235,235,235
+buildConsoleProblemBackgroundColor=20,17,18
+buildConsoleProblemHighlightedColor=255,127,127
+buildConsoleProblemInfoBackgroundColor=32,36,37
+buildConsoleProblemWarningBackgroundColor=17,15,16
+>>>>>>> origin/master
 c_braces=216,216,216
 c_comment_task_tag=204,223,50
 c_default=216,216,216

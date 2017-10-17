@@ -1,0 +1,28 @@
+package br.com.db1.exercicios;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.omg.CORBA.portable.ValueOutputStream;
+
+public class Exercicio01 {
+	
+	public Set<String> getVogais(String palavra) {
+		palavra.toLowerCase();
+		Set<String> vogais = new HashSet<>();
+		for (int i = 0; i < palavra.length(); i++) {
+			
+			char caracter = palavra.charAt(i);
+			String letra = Character.toString(caracter);
+			System.out.println(letra);
+			if (letra.equals("a") || letra.equals("e") || letra.equals("i") || letra.equals("o") || letra.equals("u")) {
+				vogais.add(letra);
+				System.out.println(letra);
+			}
+			
+		}
+		return vogais;	
+	
+	}
+}
+

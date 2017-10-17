@@ -1,0 +1,21 @@
+
+package br.com.db1.exercicios;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Exercicio04 {
+	
+	public List<Integer> exibePosicao3(List<Integer> valores) {
+		
+		List<Integer> novosValores = new ArrayList<>();
+		for (int i = 0; i < valores.size(); i++) {
+			if (i % 3 == 0){
+				System.out.println(valores.get(i));
+				novosValores.add(valores.get(i));
+			}
+		}
+		return novosValores;
+	}
+}

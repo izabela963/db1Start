@@ -1,0 +1,41 @@
+package br.com.db1.exercicios.test;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+import br.com.db1.exercicios.Exercicio08;
+
+public class Exercicio08Test {
+	@Test
+	public void comparaListasTest(){
+		
+		Exercicio08 colecao = new Exercicio08();
+		
+		
+		Set<String> lista1 = new HashSet<>();
+		Set<String> lista2 = new HashSet<>();
+		
+		lista1.add("Engenharia");
+		lista1.add("Elétrica");
+		lista1.add("JAVA");
+		lista1.add("TinBot");
+		lista1.add("JAVA");
+		
+		lista2.add("Engenharia");
+		lista2.add("Elétrica");
+		lista2.add("TinBot");
+		lista2.add("JAVA");
+		lista2.add("JAVA");
+		
+		Boolean iguais = lista1.equals(lista2);
+		
+		//Assert.assertTrue(lista1.size() == lista2.size());
+		Assert.assertTrue(lista1.containsAll(lista2));
+		Assert.assertEquals(iguais, colecao.comparaSets(lista1, lista2));
+
+
+	}
+}

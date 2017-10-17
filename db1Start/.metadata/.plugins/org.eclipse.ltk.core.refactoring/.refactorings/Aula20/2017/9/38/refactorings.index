@@ -1,0 +1,13 @@
+1505848628076	Rename local variable 'vogais'
+1505933544719	Delete element
+1505933548893	Delete element
+1505933605822	Encapsulate field 'valor'
+1505933615704	Encapsulate field 'descricao'
+1505933622826	Encapsulate field 'id'
+1505935805686	Encapsulate field 'placa'
+1505935812060	Encapsulate field 'ano'
+1505935815635	Encapsulate field 'marca'
+1505936226973	Encapsulate field 'nome'
+1505936389612	Rename local variable 'outroProduto'
+1505936584495	Rename method 'getMarca'
+1505936997312	Rename method 'getPlaca'

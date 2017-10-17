@@ -1,0 +1,28 @@
+package br.com.db1.exercicios;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Exercicio02 {
+	public Set<String> getConsoantes(String palavra) {
+		palavra = palavra.toLowerCase();
+		Set<String> consoantes = new HashSet<>();
+		for (int i = 0; i < palavra.length(); i++) {
+			
+			char caracter = palavra.charAt(i);
+			String letra = Character.toString(caracter);
+
+			if (letra.equals("b") || letra.equals("c") || letra.equals("d") || letra.equals("f") || letra.equals("g")
+					|| letra.equals("h") || letra.equals("j") || letra.equals("k") || letra.equals("l") || letra.equals("m")
+					|| letra.equals("n") || letra.equals("p") || letra.equals("q") || letra.equals("r") || letra.equals("s")
+					|| letra.equals("t") || letra.equals("v") || letra.equals("x") || letra.equals("w") || letra.equals("y")
+					|| letra.equals("z") || letra.equals("ç")) {
+				consoantes.add(letra);
+				System.out.println(letra);
+			}
+			
+		}
+		return consoantes;	
+	
+	}
+}

@@ -1,0 +1,21 @@
+package br.com.db1.exercicios.test;
+
+import java.util.Set;
+
+import br.com.db1.exercicios.ColecoesSet;
+
+public class Exercicio01Test {
+	
+	Exercicio01 colecao = new Exercicio01();
+	
+	@Test
+	public void getConsoantesTest(){
+		Set<String> v = colecao.getConsoantes("Fusca");
+		Assert.assertTrue(consoantes.size() == 3);
+		Assert.assertTrue(consoantes.contains("F"));
+		Assert.assertFalse(consoantes.contains("u"));
+		Assert.assertTrue(consoantes.contains("s"));
+		Assert.assertTrue(consoantes.contains("c"));
+		Assert.assertFalse(consoantes.contains("a"));
+	}
+}

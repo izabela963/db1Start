@@ -1,0 +1,35 @@
+package br.com.db1.exercicios.test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+
+public class Exercicio07Test {
+	@Test
+	public void compareTest(){
+		
+		Exercicio07 colecao = new Exercicio07();
+		
+		String palavra1;
+		String palavra2;
+		
+		List<String> lista1 = new ArrayList<>();
+		List<String> lista2 = new ArrayList<>();
+		
+		lista1.add("Engenharia");
+		lista1.add("Elétrica");
+		lista1.add("JAVA");
+		lista1.add("TinBot");
+		lista1.add("JAVA");
+		
+		lista2.add("Engenharia");
+		lista2.add("Elétrica");
+		lista2.add("JAVA");
+		lista2.add("TinBot");
+		lista2.add("JAVA");
+		
+		
+		
+	}
+}

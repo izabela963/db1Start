@@ -1,0 +1,24 @@
+package br.com.db1.exercicios;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Exercicio02 {
+	public Set<String> getConsoantes(String palavra) {
+		palavra.toLowerCase();
+		Set<String> consoantes = new HashSet<>();
+		for (int i = 0; i < palavra.length(); i++) {
+			
+			char caracter = palavra.charAt(i);
+			String letra = Character.toString(caracter);
+
+			if (letra.equals("a") || letra.equals("e") || letra.equals("i") || letra.equals("o") || letra.equals("u")) {
+				consoantes.add(letra);
+				System.out.println(letra);
+			}
+			
+		}
+		return consoantes;	
+	
+	}
+}

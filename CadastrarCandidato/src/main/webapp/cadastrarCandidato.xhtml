@@ -1,0 +1,46 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Cadastro Candidato</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h:outputLabel value="Nome:" />
+		<br/>
+		<h:inputText value="#{cadastrarCandidatoBean.nomeCandidato}"/>
+		<br/>
+		<br/>
+		<h:outputLabel value="E-mail:" />
+		<br/>
+		<h:inputText value="#{cadastrarCandidatoBean.emailCandidato}" />
+		<br/>
+		<br/>
+		<h:outputLabel value="Telefone:" />
+		<br/>
+		<h:inputText value="#{cadastrarCandidatoBean.telefoneCandidato}" />
+		<br/>
+		<br/>
+		<h:outputLabel value="Rede social:" />
+		<br/>
+		<h:inputText value="#{cadastrarCandidatoBean.linkCandidato}" />
+		<br/>
+		<br/>
+		<h:commandButton value=" Cancelar " action="#{cadastrarCandidatoBean.cancelar}" />
+		<h:commandButton value=" Cadastrar " action="#{cadastrarCandidatoBean.cadastrar}" />
+		<br />
+		<br />
+		<h:outputLabel value="STATUS: #{cadastrarCandidatoBean.status}" />
+		<br />
+		<br />
+		<h:outputLabel value="Nome: #{cadastrarCandidatoBean.nome}" />
+		<br />
+		<h:outputLabel value="E-mail: #{cadastrarCandidatoBean.email}" />
+		<br />
+		<h:outputLabel value="Telefone: #{cadastrarCandidatoBean.telefone}" />
+		<br />
+		<h:outputLabel value="Rede Social: #{cadastrarCandidatoBean.link}" />
+	</h:form>
+</h:body>
+</html>

@@ -1,0 +1,204 @@
+Lista de exercícios de SQL.
+CRIANDO AS TABELAS DO RECIBO:
+
+CREATE TABLE recibo (
+    id SERIAL NOT NULL,
+    PRIMARY KEY (id),
+    valor INTEGER NOT NULL,
+    dataemissao DATE NOT NULL,
+    prestador_fk INTEGER NOT NULL,
+    emitente_fk INTEGER NOT NULL,
+    numero INTEGER NOT NULL
+)
+
+CREATE TABLE uf (
+    id SERIAL NOT NULL,
+    PRIMARY KEY (id),
+    nome VARCHAR(50) NOT NULL
+)
+
+CREATE TABLE cidade (
+    id SERIAL NOT NULL,
+    PRIMARY KEY (id),
+    uf_id INTEGER NOT NULL,
+    nome VARCHAR(50) NOT NULL
+)
+
+CREATE TABLE endereco (
+	id SERIAL NOT NULL,
+    PRIMARY KEY (id),
+    cidade_id INTEGER NOT NULL,
+    pessoa_id INTEGER NOT NULL,
+    tipoLogradouro VARCHAR(10) NOT NULL,
+    logradouro VARCHAR(100) NOT NULL,
+    numero VARCHAR(10) NOT NULL,
+    complemento VARCHAR(20),
+    cep VARCHAR(8) NOT NULL,
+    tipo VARCHAR(15) NOT NULL
+)
+
+CREATE TABLE pessoa (
+    id SERIAL NOT NULL,
+    PRIMARY KEY (id),
+    nome VARCHAR(50) NOT NULL,
+    documento VARCHAR(14) NOT NULL
+)
+
+* EXERCÍCIO 1:
+
+INSERT INTO uf 
+(nome)
+VALUES
+('AC'),
+('AL'),
+('AP'),
+('AM'),
+('BA'),
+('CE'),
+('DF'),
+('ES'),
+('GO'),
+('MA'),
+('MT'),
+('MS'),
+('MG'),
+('PA'),
+('PB'),
+('PR'),
+('PE'),
+('PI'),
+('RJ'),
+('RN'),
+('RS'),
+('RO'),
+('RR'),
+('SC'),
+('SP'),
+('SE'),
+('TO')
+
+* EXERCÍCIO 2:
+
+INSERT INTO cidade
+(uf_id, nome)
+VALUES
+(24, 'Chapecó'),
+(24, 'Blumenau'),
+(24, 'Joinville'),
+(16, 'Curitiba'),
+(16, 'Maringá'),
+(16, 'Lunardeli'),
+(16, 'Apucarana'),
+(16, 'Santa Fé'),
+(16, 'São Miguel do Iguaçu'),
+(16, 'Arapongas'),
+(16, 'Ponta Grossa'),
+(16, 'Jandaia do Sul'),
+(25, 'Ribeirão Preto')
+
+* EXERCÍCIO 3: 
+
+DELETE FROM uf
+WHERE id IN (
+	SELECT u.id from uf u 
+    	LEFT JOIN cidade c
+    	ON u.id = c.uf_id
+    		WHERE c.uf_id IS NULL
+)
+
+* EXERCÍCIO 4:
+
+INSERT INTO cidade
+(nome, uf_id)
+VALUES
+('São Paulo', 25),
+('Campinas', 25),
+('São Carlos', 25)
+
+* EXERCÍCIO 5:
+
+UPDATE cidade
+SET nome = 'Lunardelli'
+WHERE nome = 'Lunardeli';
+UPDATE cidade
+SET nome = 'Jandaia'
+WHERE nome = 'Jandaia do Sul';
+UPDATE cidade
+SET nome = 'Cidade Canção'
+WHERE nome = 'Maringá'
+
+* EXERCÍCIO 6:
+
+select c.nome, u.nome 
+from cidade c
+inner join uf u on u.id = c.uf_id
+order by u.nome asc, c.nome asc
+
+* EXERCÍCIO 7:
+
+SELECT u.nome, COUNT (*) AS numeroDEcidades
+FROM uf u, cidade c
+WHERE u.id = c.uf_id
+GROUP BY u.id, c.uf_id
+
+* EXERCÍCIO 8:
+
+INSERT INTO pessoa
+(nome, documento)
+VALUES
+('Elvis Presley', '456123789-2'),
+('Shawn Mendes', '895219369-56'),
+('Camila Cabello', '454856456')
+
+INSERT INTO endereco
+(pessoa_id, cidade_id, tipoLogradouro, logradouro, numero, cep, tipo)
+VALUES
+(1, 4, 'Rua', 'dos Bobos', '00', '12354678', 'Residencial'),
+(1, 4, 'Av.', 'dos Tucanos', '171', '16455578', 'Comercial'),
+(2, 6, 'Rua', 'da Escola', '100', '18536678', 'Residencial'),
+(2, 6, 'Av.', 'Canadá', '58', '96455578', 'Comercial'),
+(3, 10, 'Rua', 'da Quinta Harmonia', '727', '24957639', 'Residencial'),
+(3, 12, 'Av.', 'Havana', '54', '92136888', 'Comercial')
+
+* EXERCÍCIO 9:
+
+INSERT INTO pessoa
+(nome, documento)
+VALUES
+('Paola Bracho', '456154989-2'),
+('Paulina Martins', '195236479-6')
+
+INSERT INTO endereco
+(pessoa_id, cidade_id, tipoLogradouro, logradouro, numero, cep, tipo)
+VALUES
+(4, 14, 'Rua', 'Carlos Daniel', '960', '25784678', 'Residencial'),
+(4, 14, 'Av.', 'Usurpadora', '1997', '36455575', 'Comercial'),
+(5, 15, 'Rua', 'dos Brachos', '15', '18846678', 'Residencial'),
+(5, 16, 'Av.', 'Mexicana', '578', '96447578', 'Comercial')
+
+
+* EXERCÍCIO 10:
+
+INSERT INTO pessoa
+(nome, documento)
+VALUES
+('Laura', '23548452-2'),
+('Edgar Vieira', '165465479-6')
+
+INSERT INTO endereco
+(pessoa_id, cidade_id, tipoLogradouro, logradouro, numero, cep, tipo)
+VALUES
+(6, 3, 'Rua', 'da Boa Vista', '545', '2526678', 'Comercial'),
+(7, 2, 'Av.', 'dos Alecrins', '1902', '3645455', 'Comercial')
+
+* EXERCÍCIO 11:
+
+SELECT p.nome AS PESSOA, e.logradouro AS ENDERECO, c.nome AS CIDADE, u.nome AS ESTADO
+FROM pessoa p
+INNER JOIN endereco e ON e.pessoa_id = p.id
+INNER JOIN cidade c ON c.id = e.cidade_id
+INNER JOIN uf u ON u.id = c.uf_id
+ORDER BY p.nome, u.nome, c.nome
+
+* EXERCÍCIO 12:
+
